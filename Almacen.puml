@@ -1,0 +1,24 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class "Almacen<T>" as Almacen {
+  - elemento : T
+  + setElemento(elemento : T) : void
+  + getElemento() : T
+}
+
+class AlumnoUAEMex {
+  - cuenta : int
+  - nombre : String
+  - promedio : double
+  + AlumnoUAEMex(cuenta : int, nombre : String, promedio : double)
+  + getCuenta() : int
+  + getNombre() : String
+  + getPromedio() : double
+  + compareTo(otro : AlumnoUAEMex) : int
+  + toString() : String
+}
+
+interface "Comparable<AlumnoUAEMex>" as Comparable
+AlumnoUAEMex ..|> Comparable
+@enduml
